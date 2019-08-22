@@ -1,0 +1,47 @@
+.whole
+  .left
+    .top
+      .top__test
+        = current_user.name
+      %a.top__icon{:href => "/rooms/new"}
+        %i.far.fa-edit
+      %a.top__icon{:href => "/users/#{current_user.id}/edit"}
+        %i.fas.fa-cog
+    .mid
+      = render @rooms
+
+
+
+  .right
+    .header
+      .title{data: {id: @room.id}}
+        %p.title__chatName #{@room.name}
+        %p.title__chatMember Member: 
+        - @room.users.each do |user|
+          %p.title__chatMember 
+            = user.name
+      .header__editButton
+        Edit
+        %a{:href => "/rooms/#{@room.id}/edit"}
+    .content
+      = render @messages
+
+
+
+
+
+
+    
+    .form
+      = form_for [@room,@message] do |f|
+        .formContent.submit
+          = f.text_field :body, class: "formContent__message", placeholder: "type a message"
+          %i.fas.fa-image.fa-lg.formContent__icon
+          = f.file_field :image, class: "formContent__input"
+        
+        = f.submit 'Send', class: "form__button submit"
+
+
+
+
+

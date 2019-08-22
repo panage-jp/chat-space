@@ -1,0 +1,217 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.notification {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+}
+
+.whole {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  height: 100%;
+  width: 300px;
+}
+
+
+.top {
+  height: 100px;
+  background-color: #253141;
+  padding: 37px 20px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+  display: flex;
+
+  &__test {
+    width: 215px;
+
+  }
+
+  &__icon {
+    margin-left: 5px;
+  }
+
+}
+
+.mid {
+  height: calc(100% - 100px);
+  background-color: #2f3e51;
+  padding: 0px 20px;
+  overflow: scroll;
+}
+
+.rooms {
+  height: 82px;
+  padding: 20px 0px;
+  color: #FFFFFF;
+  box-sizing: border-box;
+
+
+  &__name {
+    margin: 0px 0px 5px 0px;
+    font-size: 15px;
+  }
+
+  &__message {
+    margin: 0px;
+    font-size: 11px;
+  }
+}
+
+.right {
+  height: 100%;
+  width: calc(100% - 300px);
+}
+
+.header {
+  height: 100px;
+  padding: 0px 40px;
+  border-bottom: solid #eeeeee;
+  display: flex;
+
+  &__editButton {
+    margin: 28px 0px 0px 30px;
+    height: 40px;
+    width: 80px;
+    font-size: 20px;
+    color: #38aef0;
+    background-color: white;
+    border: solid 1px #38aef0;
+    line-height: 40px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    position: relative;
+
+    a {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-indent: -999px;
+      z-index: 2;
+    }
+  }
+}
+
+.title {
+  height: 100px;
+  width: 1000px;
+
+  &__chatName {
+    font-size: 20px;
+    color: #333333;
+    margin-top: 33px;
+    margin-bottom: 0%;
+    height: 33px;
+  }
+
+  &__chatMember {
+    font-size: 12px;
+    color: #999999;
+    margin: 0px;
+    margin-right: 7px;
+    height: 15px;
+    float: left;
+  }
+
+}
+
+.content {
+  height: calc(100% - 190px);
+  padding: 0px 40px;
+  background-color: #fafafa;
+  overflow: scroll;
+}
+
+.post {
+  height: auto;
+  padding-top: 40px;
+
+  &__user {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  &__date {
+    font-size: 12px;
+    color: #999999;
+    font-weight: normal;
+  }
+
+  &__content {
+    margin: 8px 0px 0px 0px;
+    font-size: 14px;
+  }
+}
+
+.form {
+  height: 88px;
+  background-color: #dddddd;
+  padding: 20px 40px;
+  box-sizing: border-box;
+
+  &__button {
+    height: 50px;
+    width: 90px;
+    font-size: 20px;
+    background-color: #38AEF0;
+    margin-left: 30px;
+
+  }
+}
+
+.formContent {
+  height: 50px;
+  width: 920px;
+  background-color: white;
+  margin-right: 15px;
+  box-sizing: border-box;
+
+  &__icon {
+    color: black;
+    margin: 15px 0px 0px 40px;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__message {
+    height: 50px;
+    width: 820px;
+    border: 0px;
+    padding: 0px 10px;
+  }
+}
+
+.submit {
+  float: left;
+  color: white;
+}

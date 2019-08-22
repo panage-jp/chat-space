@@ -1,0 +1,6 @@
+.rooms
+  %a.rooms__name{:href => "/rooms/#{room.id}/messages"}
+    = room.name
+  %br/
+  %a.rooms__message{:href => "#"}
+    = room.last_message

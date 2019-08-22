@@ -1,0 +1,15 @@
+.whole
+  .left
+    .top
+      .top__test
+        = current_user.name
+      %a.top__icon{:href => "rooms/new"}
+        %i.far.fa-edit
+      %a.top__icon{:href => "users/#{current_user.id}/edit"}
+        %i.fas.fa-cog
+    .mid
+      = render @rooms
+
+
+
+
